@@ -25,13 +25,13 @@ defmodule MarkGraphqlApiWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(MarkGraphqlApi.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(MarkGraphqlApi.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

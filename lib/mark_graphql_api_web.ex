@@ -28,8 +28,9 @@ defmodule MarkGraphqlApiWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/mark_graphql_api_web/templates",
-                        namespace: MarkGraphqlApiWeb
+      use Phoenix.View,
+        root: "lib/mark_graphql_api_web/templates",
+        namespace: MarkGraphqlApiWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
