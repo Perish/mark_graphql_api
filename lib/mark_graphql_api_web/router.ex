@@ -3,6 +3,7 @@ defmodule MarkGraphqlApiWeb.Router do
 
   pipeline :api do
     plug(:accepts, ["json"])
+    plug(MarkGraphqlApiWeb.Plugs.Context)
   end
 
   scope "/api" do
