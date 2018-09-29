@@ -21,6 +21,11 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:user_id]
 
+# Configures Guardian
+config :mark_graphql_api, MarkGraphqlApi.Guardian,
+  issuer: "mark_graphql_api",
+  secret_key: "lyq+2cJ7j51Ei615ejwX+rdqAoRaHZwwpxb6E3XINqKfrIs1nTTnooxepbTXbFoV"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
