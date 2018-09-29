@@ -4,4 +4,5 @@ defmodule MarkGraphqlApiWeb.Schema.Types do
   alias __MODULE__
 
   import_types(Types.Usertype)
+  import_types(Types.SessionType)
 end
